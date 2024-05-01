@@ -32,8 +32,8 @@ IGNORE 1 LINES
 
 SELECT * FROM kdramadata;
 
-
-
+-- cleaning data
+ALTER TABLE kdramadata DROP COLUMN ranks;
 
 
 
