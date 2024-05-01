@@ -18,7 +18,7 @@ def timeToMinutes(time):
     print(minutes)
     return minutes
 
-with open('./csv/top100_kdrama.csv', 'r', encoding="utf-8") as csvfile:
+with open('./csv/kdrama.csv', 'r', encoding="utf-8") as csvfile:
     kdramaDB = csv.DictReader(csvfile)
     converted_data = []
     fieldnames = kdramaDB.fieldnames
@@ -27,7 +27,11 @@ with open('./csv/top100_kdrama.csv', 'r', encoding="utf-8") as csvfile:
         row['Duration'] = minutes
         converted_data.append(row)
         
-with open('./csv/top100_kdrama.csv', 'w', encoding="utf-8") as csvfile:
+with open('./csv/kdrama.csv', 'w', encoding="utf-8") as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     writer.writeheader()
     writer.writerows(converted_data)
+
+
+
+
