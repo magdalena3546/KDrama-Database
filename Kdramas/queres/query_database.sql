@@ -55,4 +55,12 @@ GROUP BY actor
 ORDER BY apperances DESC;
 
 
+-- Calculate the average number of episodes for each year of release 
+SELECT 
+    yearOfRelease,
+    AVG(numOfEpisode) AS numOfEpisodes
+FROM kdramadata
+GROUP BY yearOfRelease
+ORDER BY yearOfRelease;
+
 
